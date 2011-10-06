@@ -65,7 +65,7 @@ module OAuth
           @token.invalidate!
           flash[:notice] = "You've revoked the token for #{@token.client_application.name}"
         end
-        redirect_to [current_user, ApiApplication]
+        redirect_to [current_user, ClientApplication]
       end
 
       # Invalidate current token
